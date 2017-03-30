@@ -15,15 +15,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) { //t建立選項
-        menu.add("選項一");
-        menu.add("選項二");
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.my_menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {   //選擇選項
-        Toast.makeText(MainActivity.this,item.getTitle(),Toast.LENGTH_SHORT).show();  //顯示
+        switch(item.getItemId()){
+            case R.id.meanuadd:
+                break;
+            case R.id.menusetting:
+                break;
+            case R.id.menuabout:
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
